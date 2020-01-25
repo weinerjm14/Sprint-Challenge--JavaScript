@@ -79,19 +79,17 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = []
-function returnUni(array){
-//   return universities = array.university.push;
-// }
-// graduates.forEach(graduates, returnUni(graduates))
-// universities.sort((x, y) => {
-//   if (x > y) {
-//     return 1; // move x forward
-//   } else if (x === y) {
-//     return 0; // they are the same
-//   } else {
-//     return -1; // move x back
-//   }
-// });
+graduates.forEach(graduates => {universities.push(`${graduates.university}`)});
+
+universities.sort((x, y) => {
+  if (x > y) {
+    return 1; // move x forward
+  } else if (x === y) {
+    return 0; // they are the same
+  } else {
+    return -1; // move x back
+  }
+});
 
 console.log(universities);
 
@@ -128,10 +126,12 @@ const zooAnimals = [
 
 /* Request 1: .forEach()
 
-The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, 
+and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
+
+const displayNames =[]
 console.log(displayNames);
 
 /* Request 2: .map()
