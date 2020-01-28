@@ -152,12 +152,9 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = []
-  function getanam(){
-    
-    aname =`${zooAnimals.animal_name};`
-    return lowCaseAnimalNames.push(aname.toLowerCase) 
-};
+const lowCaseAnimalNames = zooAnimals.map((animals) => {
+  return animals.animal_name.toLowerCase();
+})
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -182,8 +179,8 @@ Remember the reduce method takes two arguments: a callback
 
 const populationTotal = zooAnimals.reduce((total, zooAnimals) => {
   return total += zooAnimals.population;
-})
-console.log('this is' + populationTotal);
+}, 0)
+console.log(populationTotal);
 
 
 /*
